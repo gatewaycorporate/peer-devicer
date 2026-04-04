@@ -1,0 +1,10 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["src/main.ts"],
+  "out": "docs",
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "includeVersion": true,
+  "readme": "README.md",
+  "name": "peer-devicer"
+}
