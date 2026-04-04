@@ -148,7 +148,7 @@ identify(payload, context)
 | Pro | $49 / mo | Unlimited | All 5 types | 50 (configurable) |
 | Enterprise | $299 / mo | Unlimited | All 5 types | Unlimited |
 
-Get a license key at **[polar.sh/gateway-corporate](https://polar.sh/gateway-corporate)**.
+You can obtain a license key through polar.sh [here](https://buy.polar.sh/polar_cl_0Y4djPLDe5yLdNUDKdtPGlFW5TG2ZpFD5qkb93HsSQc)
 
 Without a key the library runs on the free tier automatically and logs a warning at startup.
 
