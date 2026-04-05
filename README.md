@@ -64,9 +64,9 @@ import {
 // ── Initialise plugins ──────────────────────────────────────
 const deviceManager = new DeviceManager({ /* … */ });
 
-const ipManager  = new IpManager({ licenseKey: process.env.IP_LICENSE_KEY });
-const tlsManager = new TlsManager({ licenseKey: process.env.TLS_LICENSE_KEY });
-const peerManager = new PeerManager({ licenseKey: process.env.PEER_LICENSE_KEY });
+const ipManager  = new IpManager({ licenseKey: process.env.DEVICER_LICENSE_KEY });
+const tlsManager = new TlsManager({ licenseKey: process.env.DEVICER_LICENSE_KEY });
+const peerManager = new PeerManager({ licenseKey: process.env.DEVICER_LICENSE_KEY });
 
 // Register ip-devicer and tls-devicer FIRST so their enrichmentInfo
 // is available when peer-devicer runs (post-processor ordering matters).
@@ -107,7 +107,7 @@ app.post('/identify', async (req, res) => {
 import { createSqliteAdapter } from 'peer-devicer';
 
 const peerManager = new PeerManager({
-  licenseKey: process.env.PEER_LICENSE_KEY,
+  licenseKey: process.env.DEVICER_LICENSE_KEY,
   storage: createSqliteAdapter('/data/peers.db'),
 });
 ```
