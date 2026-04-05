@@ -1,6 +1,6 @@
 {
   "name": "peer-devicer",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "type": "module",
   "description": "Peer Reputation Networking Middleware for the FP-Devicer Intelligence Suite",
   "main": "./dist/main.js",
@@ -34,7 +34,7 @@
   "author": "Samuel Roux",
   "license": "BSL-1.0",
   "dependencies": {
-    "devicer.js": "^2.0.1",
+    "devicer.js": "^2.0.2",
     "ipaddr.js": "^2.2.0"
   },
   "devDependencies": {
