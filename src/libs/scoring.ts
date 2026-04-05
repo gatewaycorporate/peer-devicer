@@ -20,10 +20,15 @@ const PEER_SUSPICION_WEIGHTS = {
 
 // ── Thresholds for factor string generation ───────────────────
 
+/** Taint level that marks the peer neighborhood as strongly suspicious. */
 const HIGH_TAINT_THRESHOLD  = 70;
+/** Taint level where negative confidence adjustment begins. */
 const MED_TAINT_THRESHOLD   = 40;
+/** Trust level that qualifies a peer neighborhood as strongly trustworthy. */
 const HIGH_TRUST_THRESHOLD  = 80;
+/** Per-peer suspicion level counted toward known-bot-cluster detection. */
 const HIGH_SUSPICION_THRESHOLD = 60;
+/** Matches peer flag reasons associated with VPN, proxy, hosting, or cloud networks. */
 const VPN_SUBNET_PATTERN    = /vpn|proxy|datacenter|hosting|cloud/i;
 
 // ── Public API ────────────────────────────────────────────────

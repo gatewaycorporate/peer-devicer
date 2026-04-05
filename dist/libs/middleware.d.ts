@@ -1,5 +1,6 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
 import type { PeerIdentifyContext } from '../types.js';
+/** Express/Connect-style continuation callback used by the peer middleware. */
 export type NextFunction = (err?: unknown) => void;
 /** Request object after all three middlewares have run. */
 export interface PeerRequest extends IncomingMessage {

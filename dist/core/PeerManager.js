@@ -48,6 +48,20 @@ export class PeerManager {
     initPromise = null;
     _licenseKey;
     _customStorage;
+    /**
+     * Create a peer-reputation manager with optional graph, storage, and license configuration.
+     *
+     * When a license key is supplied the constructor optimistically uses the paid-tier
+     * edge-history depth until {@link init} validates the key. If validation fails,
+     * the instance falls back to the free-tier limits.
+     *
+     * @param opts - Optional runtime configuration.
+     * @param opts.licenseKey - Polar license key used to unlock paid tiers.
+     * @param opts.storage - Custom peer storage backend. Defaults to the in-memory adapter.
+     * @param opts.maxPeersPerDevice - Maximum peer edges retained per device.
+     * @param opts.enabledEdgeTypes - Peer edge types that may be created during graph updates.
+     * @param opts.confidenceBoostWeight - Multiplier applied to the peer-derived confidence delta.
+     */
     constructor(opts = {}) {
         const hasKey = Boolean(opts.licenseKey?.trim());
         if (!hasKey) {
